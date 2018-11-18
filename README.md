@@ -4,4 +4,5 @@ Configuration customized from [here](https://github.com/ContinuumIO/docker-image
 
 # to run jupyter notebook 
 
-    docker run -i -t -p 8888:8888 ramselvan/python /bin/bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/home/anbu/notebooks --ip='*' --port=8888 --no-browser"
+    docker run -i -t -p 8888:8888 ramselvan/python /bin/bash -c "su -c '/opt/conda/bin/jupyter notebook --notebook-dir=/home/anbu/notebooks --ip=\* --port=8888 --no-browser' anbu"
+
