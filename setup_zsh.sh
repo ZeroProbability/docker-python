@@ -9,3 +9,4 @@ export LANG=C.UTF-8
 alias python=python3
 EOF
 
+su -c "mkdir /home/anbu/notebooks" anbu

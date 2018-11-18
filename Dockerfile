@@ -14,6 +14,7 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.
     echo ". /opt/conda/etc/profile.d/conda.sh" >> /home/anbu/.zshrc && \
     echo "echo 'To activate anaconda type => conda activate base'" >> /home/anbu/.zshrc
 
+RUN bash -c "/opt/conda/bin/conda install jupyter -y --quiet"
 
 COPY setup_zsh.sh /
 RUN apt-get -y purge python && apt-get -y autoremove
