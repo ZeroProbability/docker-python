@@ -15,3 +15,9 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.
     echo "echo 'To activate anaconda type => conda activate base'" >> /home/anbu/.zshrc
 
 
+COPY setup_zsh.sh /
+RUN apt-get -y purge python && apt-get -y autoremove
+RUN bash -c "/setup_zsh.sh"
+RUN bash -c "pip3 install pipenv"
+RUN bash -c "rm -f /setup*.sh"
+
